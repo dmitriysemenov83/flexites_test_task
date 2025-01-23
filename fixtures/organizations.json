@@ -1,0 +1,18 @@
+[
+  {
+    "model": "organizations.organization",
+    "pk": 1,
+    "fields": {
+      "name": "test organizations",
+      "description": "test description"
+    }
+  },
+  {
+    "model": "organizations.organization",
+    "pk": 2,
+    "fields": {
+      "name": "Техника плюс",
+      "description": "Продажа техники"
+    }
+  }
+]
