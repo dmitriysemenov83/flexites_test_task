@@ -23,3 +23,50 @@
 В проекте есть сервисные команды, для создания супер пользователя(cr_superuser) и обычного пользователя (cr_user).
 В проекте для удобства сохранены фикстуры в папке fixtures, которые можно загрузить.
 
+## Описание API
+
+1. Регистрация пользователя
+- URL: POST /users/
+- Тело запроса:
+    {
+      "email": "user@test.com",
+      "password": "password"
+    }
+
+2. Авторизация (получение JWT токена)
+- URL: POST /token/
+- Тело запроса:
+    {
+      "email": "user@test.com",
+      "password": "passwor"
+    }
+
+3. Обновление профиля
+- URL: PATCH /users/{id}/
+- Заголовок: Authorization: Bearer <токен>
+- Тело запроса:
+    {
+      "first_name": "Jane",
+      "phone": "0987654321"
+    }
+
+4. Список пользователей
+- URL: GET /users/
+- Заголовок: Authorization: Bearer <токен>
+
+5. Детали пользователя
+- URL: GET /users/{id}/
+- Заголовок: Authorization: Bearer <токен>
+
+6. Создание организации
+- URL: POST /organizations/
+- Заголовок: Authorization: Bearer <токен>
+- Тело запроса:
+    {
+      "name": "OOO Organization",
+      "description": "Org Description"
+    }
+
+7. Список организаций
+- URL: GET /organizations/
+- Заголовок: Authorization: Bearer <токен>
