@@ -59,7 +59,7 @@
 - Заголовок: Authorization: Bearer <токен>
 
 6. Создание организации
-- URL: POST /organizations/
+- URL: POST /organizations/create/
 - Заголовок: Authorization: Bearer <токен>
 - Тело запроса:
     {
